@@ -2,19 +2,7 @@ var express = require('express')
 var fs = require('fs')
 var app = express()
 
-const chalk = require('chalk')
-var lib = require('./lib.js') //that's the whole object!
-console.log(chalk.blueBright(JSON.stringify(lib.car))) 
 
-
-const ProgressBar = require('progress');
-const bar = new ProgressBar(':bar', { total: 50 });
-const timer = setInterval(() => {
-  bar.tick();
-  if (bar.complete) {
-    clearInterval(timer);
-  }
-},100);
 
 //(classic without express) to return a web page http is required
 //https://nodejs.dev/learn/introduction-to-nodejs
